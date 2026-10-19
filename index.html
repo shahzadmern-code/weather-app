@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <main class="weather-app">
+        <h1>Weather App</h1>
+        <p class="subtitle">Discover the weather anywhere in the world</p>
+
+
+        <form id="search-form" class="search-box">
+            <input type="text" id="city-input" placeholder="Enter Indian city name..." aria-label="City name" required>
+            <button type="submit" id="search-btn" class="search-btn">
+                Search
+            </button>
+        </form>
+
+        <select id="location-select" aria-label="Select city" hidden>
+            <option value="">Select the correct city</option>
+        </select>
+
+        <p id="message" role="status" aria-live="polite"></p>
+
+
+        <section id="weather-card" class="weather-card" hidden>
+            <h2 id="city-name">City</h2>
+            <p id="date"></p>
+
+            <img id="weather-icon" src="" alt="Weatrher-icon">
+
+            <h3 id="temperature">--°C</h3>
+            <p id="description">Weather condition</p>
+
+            <div class="details">
+                <div class="detail">
+                    <span>Feels like</span>
+                    <span id="feels-like">--°C</span>
+                </div>
+
+                <div class="detail">
+                    <span>Humidity</span>
+                    <span id="humidity">--%</span>
+                </div>
+
+                <div class="detail">
+                    <span>Wind Speed</span>
+                    <span id="wind-speed">--km/h</span>
+                </div>
+
+                <div class="detail">
+                    <span>UV Index</span>
+                    <span id="uv-index">--</span>
+                </div>
+            </div>
+        </section>
+        <footer>Weather data powered by OpenWeatherMap</footer>
+    </main>
+</body>
+
+
+</html>
